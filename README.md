@@ -1,7 +1,13 @@
 # "Ser Benfiquista User Hide" Chrome extension
 
-Hides or blurs ignored users on https://serbenfiquista.com/forum. It targets the normal topic pages and best messages section.
-**This is not an official extension.**
+Hides or blurs ignored users on https://serbenfiquista.com/forum. **This is not an official extension.**
+
+## How it works
+ 
+The current way of ignoring users in SB is a bit flawed as you can still see quotes from the ignored users.
+This extension targets the normal topic pages and best messages section. It will hide both direct and quoted messages.
+
+This extension does not **modify or alter the original page html**. It uses CSS to hide the content instead.
 
 ## Install guide
 
