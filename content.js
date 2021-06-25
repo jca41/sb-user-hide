@@ -41,7 +41,7 @@ function sbRun(ignoredUsers = [], blur) {
 chrome.storage.local.get("settings", (result) => {
   const { sb_on, sb_ignoredUsers, sb_blur } = result.settings || {};
   const ignoredUsers = sb_ignoredUsers.split(",");
-  if (sb_on && ignoredUsers.length) {
+  if (sb_on && ignoredUsers.length && !!ignoredUsers[0]) {
     sbRun(ignoredUsers, sb_blur);
   }
 });
