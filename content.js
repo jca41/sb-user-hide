@@ -25,7 +25,6 @@ function sbGetPosts() {
 function sbRun(ignoredUsers = [], blur) {
   const posts = sbGetPosts();
   posts.forEach((post) => {
-    const isPoster = sbIsPoster(post, ignoredUsers);
     if (sbIsPoster(post, ignoredUsers) || sbIsQuoted(post, ignoredUsers)) {
       if (blur) {
         post.parentElement.classList.add("sb-ignore-user-blur");
