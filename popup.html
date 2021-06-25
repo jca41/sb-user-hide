@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ser Benfiquista User Hide</title>
+    <script src="alpine-3.1.1.js" defer></script>
+    <script src="popup.js"></script>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="content" x-data="data()" x-init="init()">
+      <h1>Ser Benfiquista User Hide</h1>
+      <div class="form-item">
+        <label for="extension-on">ON</label>
+        <input
+          name="extension-on"
+          id="extension-on"
+          type="checkbox"
+          x-model="sb_on"
+        />
+      </div>
+      <div class="form-item">
+        <label for="ignored-users">Ignored users (Ex: user1,user2,user3)</label>
+        <textarea
+          name="ignored-users"
+          id="ignored-users"
+          rows="3"
+          x-model="sb_ignoredUsers"
+        ></textarea>
+      </div>
+      <div class="form-item">
+        <label for="blur">Blur instead of hide</label>
+        <input name="blur" id="blur" type="checkbox" x-model="sb_blur" />
+      </div>
+      <button @click="save()">Save settings</button>
+      <template x-if="sb_saved">
+        <div>Saved!</div>
+      </template>
+    </div>
+  </body>
+</html>

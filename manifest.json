@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Ser Benfiquista User Hide",
+  "version": "1.0.0",
+  "description": "Hides or blurs ignored users on https://serbenfiquista.com/forum. This is not an official extension.",
+  "short_name": "sb-user-hide",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://serbenfiquista.com/forum/*"],
+      "css": ["content.css"],
+      "js": ["content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_title": "Ser Benfiquista User Hide",
+    "default_popup": "popup.html"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
