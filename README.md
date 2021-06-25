@@ -1,4 +1,4 @@
-# "Ser Benfiquista User Hide" Chrome extension
+# "Ser Benfiquista User Hide" browser extension
 
 Hides or blurs ignored users on https://serbenfiquista.com/forum. **This is not an official extension.**
 
@@ -16,6 +16,10 @@ This extension does not **modify or alter the original page html**. It uses CSS 
 3. Go to `chrome://extensions/` and enable "Developer Mode"
 4. Click "Load unpacked" and select the extension folder
 
+### Install later updates
+
+If there's an update on the code, like a bug fix, please go ahead and reinstall the extension.
+
 ## How to Use
 
 There's 3 settings available.
@@ -23,3 +27,10 @@ There's 3 settings available.
 - ON, enables/disables the extension
 - Ignored users, a comma separated list of the users to ignore. For ex: `user1,user2,user3`
 - Blur, by default the extension hides the posts. Alternatively, you can blur them instead.
+
+## Browser Support
+
+Working on
+
+- Chrome
+- Opera
