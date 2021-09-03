@@ -5,6 +5,7 @@
   "description": "Hides or blurs ignored users on https://serbenfiquista.com/forum. This is not an official extension.",
   "short_name": "sb-user-hide",
   "permissions": ["storage"],
+  "icons": { "16": "dot.png", "48": "dot.png", "128": "dot.png" },
   "content_scripts": [
     {
       "matches": ["https://serbenfiquista.com/forum/*"],
