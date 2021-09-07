@@ -3,6 +3,8 @@
 
 Esconde ou desfoca users ignorados no fórum https://serbenfiquista.com/forum. __Esta extensão não é oficial.__
 
+__Chrome web store__: https://chrome.google.com/webstore/detail/ser-benfiquista-user-hide/cboglndhlmmcjbnfnemndgkejdgmadoi
+
 ## Como funciona
 
 A forma atual de ignorar users no SB é de certa forma falível porque é possível as mensagens dos users ignorados através de citações. Esta extensão afecta as páginas normais dos tópicos e a secção de melhores mensagens. Esconde mensagens directas e mensagens citadas de users ignorados.
@@ -37,6 +39,8 @@ Existem 3 opções disponíveis:
 # *"Ser Benfiquista User Hide"* browser extension 🏴󠁧󠁢󠁥󠁮󠁧󠁿
 
 Hides or blurs ignored users on https://serbenfiquista.com/forum. **This is not an official extension.**
+
+__Chrome web store__: https://chrome.google.com/webstore/detail/ser-benfiquista-user-hide/cboglndhlmmcjbnfnemndgkejdgmadoi
 
 ## How it works
  
