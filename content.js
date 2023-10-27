@@ -5,7 +5,7 @@ function sbIsPoster(postEl, ignoredUsers) {
 function sbIsQuoted(postEl, ignoredUsers) {
   let quoteHeaders = [];
   postEl
-    .querySelectorAll(".quoteheader a")
+    .querySelectorAll("cite a")
     .forEach((el) => quoteHeaders.push(el.innerText));
 
   if (!quoteHeaders.length) return false;
@@ -15,25 +15,31 @@ function sbIsQuoted(postEl, ignoredUsers) {
   );
 }
 
+function sbIsMarkedPost(postEl, ignoredUsers) {
+  return sbIsPoster(postEl, ignoredUsers) || sbIsQuoted(postEl, ignoredUsers);
+}
+
 function sbGetPosts() {
   const topicPosts = document.querySelectorAll(".post_wrapper");
   const bestOfPosts = document.querySelectorAll(".core_posts");
 
-  return topicPosts.length ? topicPosts : bestOfPosts;
+  return { topic: topicPosts, best: bestOfPosts };
 }
 
 function sbRun(ignoredUsers = [], blur) {
-  const posts = sbGetPosts();
-  posts.forEach((post) => {
-    if (sbIsPoster(post, ignoredUsers) || sbIsQuoted(post, ignoredUsers)) {
-      if (blur) {
-        post.parentElement.classList.add("sb-ignore-user-blur");
-      } else {
-        post.classList.add("sb-ignore-user-hide");
-        post.parentElement.firstElementChild.classList.add(
-          "sb-ignore-user-hide"
-        );
-      }
+  const { topic, best } = sbGetPosts();
+
+  topic.forEach((post) => {
+    if (sbIsMarkedPost(post, ignoredUsers)) {
+      post.parentElement.classList.add(
+        blur ? "sb-ignore-user-blur" : "sb-ignore-user-hide"
+      );
+    }
+  });
+
+  best.forEach((post) => {
+    if (sbIsMarkedPost(post, ignoredUsers)) {
+      post.classList.add(blur ? "sb-ignore-user-blur" : "sb-ignore-user-hide");
     }
   });
 }
