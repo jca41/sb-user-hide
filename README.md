@@ -1,3 +1,6 @@
+# Arquivado
+
+Nova versão: https://github.com/jca41/serbenfiquista-browser-extension
 
 # Extensão para browsers *"Ser Benfiquista User Hide"* 🇵🇹
 
@@ -35,6 +38,10 @@ Existem 3 opções disponíveis:
 * Opera
 
 ---
+
+# Deprecated
+
+New version: https://github.com/jca41/serbenfiquista-browser-extension
 
 # *"Ser Benfiquista User Hide"* browser extension 🏴󠁧󠁢󠁥󠁮󠁧󠁿
 
